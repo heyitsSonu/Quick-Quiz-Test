@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Quiz Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+
+    <!-- Start screen -->
+    <section id="start-screen" class="screen active">
+      <h1>Think you know your stuff?</h1>
+      <p class="lead">Five questions across tech, science, geography and art. You get 15 seconds for each one.</p>
+      <button id="start-btn" class="btn" type="button">Start quiz</button>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz-screen" class="screen">
+      <header class="quiz-header">
+        <span id="progress-text" class="progress-text">Question 1 of 5</span>
+        <span id="timer" class="timer" role="timer" aria-label="Time left">15s</span>
+      </header>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="progress-bar" class="progress-fill"></div>
+      </div>
+      <h2 id="question-text" class="question"></h2>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+    </section>
+
+    <!-- Results screen -->
+    <section id="result-screen" class="screen">
+      <div id="ring" class="ring">
+        <div class="ring-inner"><span id="percent">0%</span></div>
+      </div>
+      <h2 id="result-message" class="result-message"></h2>
+      <p id="result-score" class="lead"></p>
+      <button id="restart-btn" class="btn" type="button">Restart quiz</button>
+    </section>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
